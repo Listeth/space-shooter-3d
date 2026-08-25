@@ -1,0 +1,24 @@
+<!--
+  霓虹跑酷 - 浏览器入口文件
+  功能：创建 Canvas 画布，加载游戏逻辑 game.js
+  注意：
+    - 使用 type="script" 直接加载，无模块依赖
+    - CSS 中 canvas 宽高 100%，由 game.js 内部设置逻辑尺寸
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>霓虹跑酷 · 最终版</title>
+<style>
+  /* 全屏无滚动，背景黑色 */
+  html,body{background:#000;width:100%;height:100%;margin:0;padding:0;overflow:hidden;}
+  #game{width:100%;height:100%;display:block;background:#0a0a1a;}
+</style>
+</head>
+<body>
+<canvas id="game"></canvas>
+<script src="./game.js"></script>
+</body>
+</html>
