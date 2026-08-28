@@ -1,0 +1,6 @@
+/* #fireBtn 默认隐藏，仅在移动端用 JS 显示（见 main.js） */
+#fireBtn { display: none; }
+
+/* #gameOverScreen 默认隐藏，通过添加 .show 类显示 */
+#gameOverScreen { display: none; }
+#gameOverScreen.show { display: flex; }
