@@ -1,0 +1,16 @@
+{
+  "name": "star-hunter-storage",
+  "version": "1.0.0",
+  "description": "星穹猎手游戏后端存储服务（MySQL + Node.js）",
+  "main": "gameService.js",
+  "scripts": {
+    "init-db": "node init.js",
+    "test-db": "node -e \"const db=require('./db'); db.testConnection().then(()=>process.exit(0))\""
+  },
+  "dependencies": {
+    "mysql2": "^3.9.0",
+    "dotenv": "^16.4.5"
+  },
+  "keywords": ["3d-game", "storage", "mysql"],
+  "license": "MIT"
+}
