@@ -1,24 +1,39 @@
-<!--
-  霓虹跑酷 - 浏览器入口文件
-  功能：创建 Canvas 画布，加载游戏逻辑 game.js
-  注意：
-    - 使用 type="script" 直接加载，无模块依赖
-    - CSS 中 canvas 宽高 100%，由 game.js 内部设置逻辑尺寸
--->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>霓虹跑酷 · 最终版</title>
-<style>
-  /* 全屏无滚动，背景黑色 */
-  html,body{background:#000;width:100%;height:100%;margin:0;padding:0;overflow:hidden;}
-  #game{width:100%;height:100%;display:block;background:#0a0a1a;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>3D 太空射击</title>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js"
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<canvas id="game"></canvas>
-<script src="./game.js"></script>
+    <div id="hud">
+        <div class="label">SCORE</div>
+        <div class="value" id="scoreVal">0</div>
+        <div class="label" style="margin-top:6px;">WAVE</div>
+        <div class="value" id="waveVal">1</div>
+        <div class="label" style="margin-top:6px;">HP</div>
+        <div id="healthWrap"><div id="healthBar"></div></div>
+    </div>
+
+    <button id="fireBtn">MEGA</button>
+
+    <div id="gameOverScreen">
+        <h2>GAME OVER</h2>
+        <p id="finalScore">得分: 0</p>
+        <p id="finalWave">波次: 1</p>
+        <button id="restartBtn">重新开始</button>
+    </div>
+
+    <div id="touchHint">← 拖动屏幕移动 →</div>
+
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
